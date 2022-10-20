@@ -23,7 +23,6 @@ public class TriviaGame extends PApplet {
 // 4. Use appropriate variable names.
 
 StringList questions;
-StringList answers;
 StringList choices;
 StringList correctAnswers;
 boolean startScreen = true;
@@ -62,18 +61,6 @@ boolean gameover = false;
     questions.append("What is the capital of China?");
     questions.append("What is the capital of Japan?");
     questions.append("What is the capital of India?");
-
-    answers = new StringList();
-    answers.append("Washington D.C.");
-    answers.append("Ottawa");
-    answers.append("Mexico City");
-    answers.append("Brasilia");
-    answers.append("Buenos Aires");
-    answers.append("Canberra");
-    answers.append("Wellington");
-    answers.append("Beijing");
-    answers.append("Tokyo");
-    answers.append("New Delhi");
 
     correctAnswers = new StringList();
     correctAnswers.append("Washington D.C.");
@@ -153,7 +140,11 @@ boolean gameover = false;
         text("You got " + score + " out of 10 correct!", width/2, 120);
         text("Your score is " + score*10 + "%", width/2, 160);
         text("Click to play again!", width/2, 200);
-        if (score >= 8)
+        if (score == 10)
+        {
+            result = "Perfect Score!";
+        }
+        else if (score >= 8)
         {
             result = "Excellent!";
         }

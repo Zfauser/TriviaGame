@@ -6,7 +6,6 @@
 // 4. Use appropriate variable names.
 
 StringList questions;
-StringList answers;
 StringList choices;
 StringList correctAnswers;
 boolean startScreen = true;
@@ -45,18 +44,6 @@ void setup() {
     questions.append("What is the capital of China?");
     questions.append("What is the capital of Japan?");
     questions.append("What is the capital of India?");
-
-    answers = new StringList();
-    answers.append("Washington D.C.");
-    answers.append("Ottawa");
-    answers.append("Mexico City");
-    answers.append("Brasilia");
-    answers.append("Buenos Aires");
-    answers.append("Canberra");
-    answers.append("Wellington");
-    answers.append("Beijing");
-    answers.append("Tokyo");
-    answers.append("New Delhi");
 
     correctAnswers = new StringList();
     correctAnswers.append("Washington D.C.");
